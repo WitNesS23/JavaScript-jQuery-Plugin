@@ -9,32 +9,36 @@
 		}
 
 		div{
-			width: 10px;
 			height: 100%;
 		}
 		
-		@-webkit-keyframes marker{
+		/*@-webkit-keyframes marker{
 			50% { border-color: transparent;}
 		}
 
 		@keyframes marker{
 			50% { border-color: transparent;}
-		}
+		}*/
 	</style>
+	<script src="http://lib.sinaapp.com/js/jquery/1.9.1/jquery-1.9.1.min.js"></script>
 </head>  
 <body>
 	<div></div>
-	<script type="text/javascript" src="jquery-2.1.3.min.js"></script>
 	<script type="text/javascript" src="keyboardInput.js"></script>
 	<script type="text/javascript">
 		var config = {
 			'container' : $('div'),
 			'inputWords' : 'Hello, My name is HuangChenJie.|Nice Today.|Wonderful Tonignt. lol',
 			'keyword' : '|',
-			'classStyle' : 'font: normal 16px/1.5 \"Comic Sans MS\", cursive; color: red; '
+			'classStyle' : ' font: normal 40px/1.5 cursive; color: #ccc;',
+			'callback' : output
 		};
 
 		$('div').keyboardInput(config);
+
+		function output(){
+			console.log('666');
+		}
 	</script>
 </body>  
 </html>  
